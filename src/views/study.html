@@ -59,6 +59,8 @@
                         <label for="time">Hora</label>
                         <input name="time" id="time" min="0" max="24" type="time" value="{{filters.time}}">
                     </div>
+
+                    
                     <button type="submit">Filtrar</button>
                 </form>
 
@@ -67,9 +69,14 @@
 
         <main>
 
-            {%for proffy in proffys%}
+            {% if proffys == "" %}
+                <p class="no-results">Nenhum Professor Encontrado com a sua Pesquisa</p>
 
-            <article class="teacher-item">
+            {% else %}
+
+                {%for proffy in proffys%}
+
+                <article class="teacher-item">
                 <header>
                     <img src={{proffy.avatar}} alt={{proffy.name}}>
                     <div>
@@ -93,9 +100,12 @@
                     </a>
 
                 </footer>
-            </article>
+                </article>
 
-            {%endfor%}
+                {%endfor%}
+
+            {% endif %}
+
 
         </main>
     </div>

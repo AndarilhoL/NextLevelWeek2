@@ -1,0 +1,82 @@
+:root {
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842c2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+
+    font-size: 60%; /* controle das medidas rem */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: var(--color-primary);
+}
+
+body .sucess {
+    height: 100%;
+    border: 20px solid transparent;
+    background: url('/images/success-background.svg') no-repeat center;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+}
+
+body .mensage-sucess {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: 0;
+    border-radius: 0.8rem;
+    background: var(--color-secondary);
+
+    color: var(--color-title-in-primary);
+    font: 500 1.6rem Archivo;
+    padding: 2rem;
+
+    transition: 0.2s;
+
+    margin-top: 5.5rem;
+}
+
+button:hover {
+    background: var(--color-secondary-dark);
+}
+
+strong{
+    font: 700 4rem Poppins;
+    color: var(--color-line-in-white);
+
+    margin-bottom: 2.5rem;
+}
+
+p {
+    font: 500 1.8rem Poppins;
+    color: var(--color-text-in-primary);
+}
